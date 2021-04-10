@@ -9,13 +9,19 @@ package Frames;
  *
  * @author R2
  */
-public class FrmMenu extends javax.swing.JFrame {
+public class FrmMenu extends FrmBase {
 
+    
+    private static FrmLogin frmLogin;
+    private static FrmRegistroReporte frmRegistroReporte;
+    private static FrmReporteMaterial frmReporteMaterial;
+    
     /**
      * Creates new form FrameMenu
      */
     public FrmMenu() {
         initComponents();
+        adaptarPantalla();
     }
 
     /**
@@ -27,58 +33,117 @@ public class FrmMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnCerrarSesion = new javax.swing.JButton();
+        btnNotificaciones = new javax.swing.JButton();
+        btnRegistroReporte = new javax.swing.JButton();
+        btnReporteMaterial = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnCerrarSesion.setText("Cerrar Sesión");
+        btnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarSesionActionPerformed(evt);
+            }
+        });
+
+        btnNotificaciones.setText("Notificaciones");
+        btnNotificaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNotificacionesActionPerformed(evt);
+            }
+        });
+
+        btnRegistroReporte.setText("Registro Reporte");
+        btnRegistroReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistroReporteActionPerformed(evt);
+            }
+        });
+
+        btnReporteMaterial.setText("Reporte Material");
+        btnReporteMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporteMaterialActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(407, 407, 407)
+                .addComponent(btnCerrarSesion)
+                .addGap(77, 77, 77)
+                .addComponent(btnNotificaciones)
+                .addGap(74, 74, 74)
+                .addComponent(btnRegistroReporte)
+                .addGap(37, 37, 37)
+                .addComponent(btnReporteMaterial)
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(265, 265, 265)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCerrarSesion)
+                    .addComponent(btnNotificaciones)
+                    .addComponent(btnRegistroReporte)
+                    .addComponent(btnReporteMaterial))
+                .addContainerGap(423, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
+        this.setVisible(false);
+        getFrmLogin().setVisible(true);
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
+
+    private void btnNotificacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNotificacionesActionPerformed
+        this.setVisible(false);
+        this.getInstanciaFrmNotificaciones().setVisible(true);
+    }//GEN-LAST:event_btnNotificacionesActionPerformed
+
+    private void btnRegistroReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroReporteActionPerformed
+        this.setVisible(false);
+        getFrmRegistroReporte().setVisible(true);
+    }//GEN-LAST:event_btnRegistroReporteActionPerformed
+
+    private void btnReporteMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteMaterialActionPerformed
+        this.setVisible(false);
+        getFrmReporteMaterial().setVisible(true);
+    }//GEN-LAST:event_btnReporteMaterialActionPerformed
+
+    public static FrmLogin getFrmLogin(){
+        if (frmLogin == null) {
+            frmLogin = new FrmLogin();
         }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FrmMenu().setVisible(true);
-            }
-        });
+        return frmLogin;
     }
-
+    
+    public static FrmRegistroReporte getFrmRegistroReporte(){
+        if (frmRegistroReporte == null) {
+            frmRegistroReporte = new FrmRegistroReporte();
+        }
+        return frmRegistroReporte;
+    }
+    
+    public static FrmReporteMaterial getFrmReporteMaterial(){
+        if (frmReporteMaterial == null) {
+            frmReporteMaterial = new FrmReporteMaterial();
+        }
+        return frmReporteMaterial;
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnNotificaciones;
+    private javax.swing.JButton btnRegistroReporte;
+    private javax.swing.JButton btnReporteMaterial;
     // End of variables declaration//GEN-END:variables
 }
