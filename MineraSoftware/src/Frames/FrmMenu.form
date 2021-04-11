@@ -23,30 +23,42 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="407" max="-2" attributes="0"/>
-              <Component id="btnCerrarSesion" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-              <Component id="btnNotificaciones" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-              <Component id="btnRegistroReporte" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Component id="btnReporteMaterial" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="215" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
+                      <Component id="btnRegistroReporte" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="btnReporteMaterial" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                      <Component id="btnMapa" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="btnCerrarSesion" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                      <Component id="btnNotificaciones" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="436" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="265" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnCerrarSesion" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnNotificaciones" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCerrarSesion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnRegistroReporte" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnReporteMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnMapa" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="423" max="32767" attributes="0"/>
+              <EmptySpace pref="435" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -82,6 +94,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteMaterialActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMapa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mapa"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMapaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

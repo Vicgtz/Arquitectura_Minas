@@ -15,6 +15,7 @@ public class FrmMenu extends FrmBase {
     private static FrmLogin frmLogin;
     private static FrmRegistroReporte frmRegistroReporte;
     private static FrmReporteMaterial frmReporteMaterial;
+    private static FrmMapa frmMapa;
     
     /**
      * Creates new form FrameMenu
@@ -37,6 +38,7 @@ public class FrmMenu extends FrmBase {
         btnNotificaciones = new javax.swing.JButton();
         btnRegistroReporte = new javax.swing.JButton();
         btnReporteMaterial = new javax.swing.JButton();
+        btnMapa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,31 +70,46 @@ public class FrmMenu extends FrmBase {
             }
         });
 
+        btnMapa.setText("Mapa");
+        btnMapa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMapaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(407, 407, 407)
-                .addComponent(btnCerrarSesion)
-                .addGap(77, 77, 77)
-                .addComponent(btnNotificaciones)
-                .addGap(74, 74, 74)
-                .addComponent(btnRegistroReporte)
-                .addGap(37, 37, 37)
-                .addComponent(btnReporteMaterial)
-                .addContainerGap(215, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(321, 321, 321)
+                        .addComponent(btnRegistroReporte)
+                        .addGap(98, 98, 98)
+                        .addComponent(btnReporteMaterial)
+                        .addGap(114, 114, 114)
+                        .addComponent(btnMapa))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(btnCerrarSesion)
+                        .addGap(99, 99, 99)
+                        .addComponent(btnNotificaciones)))
+                .addContainerGap(436, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(265, 265, 265)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCerrarSesion)
                     .addComponent(btnNotificaciones)
+                    .addComponent(btnCerrarSesion))
+                .addGap(186, 186, 186)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistroReporte)
-                    .addComponent(btnReporteMaterial))
-                .addContainerGap(423, Short.MAX_VALUE))
+                    .addComponent(btnReporteMaterial)
+                    .addComponent(btnMapa))
+                .addContainerGap(435, Short.MAX_VALUE))
         );
 
         pack();
@@ -118,6 +135,11 @@ public class FrmMenu extends FrmBase {
         getFrmReporteMaterial().setVisible(true);
     }//GEN-LAST:event_btnReporteMaterialActionPerformed
 
+    private void btnMapaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMapaActionPerformed
+        this.setVisible(false);
+        getFrmMapa().setVisible(true);
+    }//GEN-LAST:event_btnMapaActionPerformed
+
     public static FrmLogin getFrmLogin(){
         if (frmLogin == null) {
             frmLogin = new FrmLogin();
@@ -139,9 +161,17 @@ public class FrmMenu extends FrmBase {
         return frmReporteMaterial;
     }
     
+    public static FrmMapa getFrmMapa(){
+        if (frmMapa == null) {
+            frmMapa = new FrmMapa();
+        }
+        return frmMapa;
+    }
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnMapa;
     private javax.swing.JButton btnNotificaciones;
     private javax.swing.JButton btnRegistroReporte;
     private javax.swing.JButton btnReporteMaterial;
