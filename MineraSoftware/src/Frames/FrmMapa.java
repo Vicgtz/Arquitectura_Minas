@@ -28,45 +28,335 @@ public class FrmMapa extends FrmBase {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         btnMenu = new javax.swing.JButton();
         btnNotificaciones = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        TxtID = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        btnHabilitar = new javax.swing.JButton();
+        btnDeshabilitar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel1 = new javax.swing.JPanel();
+        btnMinera1 = new javax.swing.JButton();
+        btnMinera2 = new javax.swing.JButton();
+        btnMinera3 = new javax.swing.JButton();
+        btnMinera4 = new javax.swing.JButton();
+        btnMinera5 = new javax.swing.JButton();
+        btnMinera6 = new javax.swing.JButton();
+        btnMinera8 = new javax.swing.JButton();
+        btnMinera7 = new javax.swing.JButton();
+        btnMinera9 = new javax.swing.JButton();
+        btnSemaforo1 = new javax.swing.JButton();
+        btnSemaforo2 = new javax.swing.JButton();
+        btnSemaforo3 = new javax.swing.JButton();
+        btnSemaforo4 = new javax.swing.JButton();
+        btnSemaforo5 = new javax.swing.JButton();
+        btnSemaforo6 = new javax.swing.JButton();
+        btnSemaforo7 = new javax.swing.JButton();
+        btnSemaforo8 = new javax.swing.JButton();
+        btnSemaforo9 = new javax.swing.JButton();
+        btnSemaforo10 = new javax.swing.JButton();
+        btnSemaforo11 = new javax.swing.JButton();
+        btnSemaforo12 = new javax.swing.JButton();
+        btnSemaforo13 = new javax.swing.JButton();
+        btnSemaforo14 = new javax.swing.JButton();
+        btnSemaforo17 = new javax.swing.JButton();
+        Mapa_Fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(908, 480));
+        setResizable(false);
+        getContentPane().setLayout(null);
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(null);
+
+        btnMenu.setForeground(new java.awt.Color(0, 0, 255));
         btnMenu.setText("Volver menu");
+        btnMenu.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 255), 1, true));
+        btnMenu.setContentAreaFilled(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMenuActionPerformed(evt);
             }
         });
+        jPanel2.add(btnMenu);
+        btnMenu.setBounds(20, 420, 91, 23);
 
+        btnNotificaciones.setForeground(new java.awt.Color(0, 0, 255));
         btnNotificaciones.setText("Notificaciones");
+        btnNotificaciones.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 255), 1, true));
+        btnNotificaciones.setContentAreaFilled(false);
         btnNotificaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNotificacionesActionPerformed(evt);
             }
         });
+        jPanel2.add(btnNotificaciones);
+        btnNotificaciones.setBounds(10, 10, 90, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(btnMenu)
-                .addGap(139, 139, 139)
-                .addComponent(btnNotificaciones)
-                .addContainerGap(887, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMenu)
-                    .addComponent(btnNotificaciones))
-                .addContainerGap(632, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mapa Icon.png"))); // NOI18N
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(150, -40, 240, 240);
+
+        jLabel2.setText("ID ");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(30, 270, 30, 20);
+
+        TxtID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 255), 1, true));
+        jPanel2.add(TxtID);
+        TxtID.setBounds(90, 270, 260, 20);
+
+        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 255), 1, true));
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(90, 310, 260, 20);
+
+        txtNombre.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));
+        jPanel2.add(txtNombre);
+        txtNombre.setBounds(90, 240, 260, 20);
+
+        jLabel3.setText("Ubicacion ");
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(30, 310, 60, 14);
+
+        jLabel4.setText("Nombre");
+        jPanel2.add(jLabel4);
+        jLabel4.setBounds(30, 240, 40, 14);
+
+        btnHabilitar.setText("Habilitar");
+        btnHabilitar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));
+        btnHabilitar.setContentAreaFilled(false);
+        jPanel2.add(btnHabilitar);
+        btnHabilitar.setBounds(90, 360, 120, 30);
+
+        btnDeshabilitar.setText("Deshabilitar");
+        btnDeshabilitar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 255), 1, true));
+        btnDeshabilitar.setContentAreaFilled(false);
+        jPanel2.add(btnDeshabilitar);
+        btnDeshabilitar.setBounds(230, 360, 120, 30);
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 450, 450);
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+
+        jPanel1.setMinimumSize(new java.awt.Dimension(706, 450));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnMinera1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera1.setToolTipText("");
+        btnMinera1.setBorder(null);
+        btnMinera1.setBorderPainted(false);
+        btnMinera1.setContentAreaFilled(false);
+        btnMinera1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 90, 70));
+
+        btnMinera2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera2.setToolTipText("");
+        btnMinera2.setBorder(null);
+        btnMinera2.setBorderPainted(false);
+        btnMinera2.setContentAreaFilled(false);
+        btnMinera2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 90, 70));
+
+        btnMinera3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera3.setToolTipText("");
+        btnMinera3.setBorder(null);
+        btnMinera3.setBorderPainted(false);
+        btnMinera3.setContentAreaFilled(false);
+        btnMinera3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 90, 70));
+
+        btnMinera4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera4.setToolTipText("");
+        btnMinera4.setBorder(null);
+        btnMinera4.setBorderPainted(false);
+        btnMinera4.setContentAreaFilled(false);
+        btnMinera4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 90, 70));
+
+        btnMinera5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera5.setToolTipText("");
+        btnMinera5.setBorder(null);
+        btnMinera5.setBorderPainted(false);
+        btnMinera5.setContentAreaFilled(false);
+        btnMinera5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 90, 70));
+
+        btnMinera6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera6.setToolTipText("");
+        btnMinera6.setBorder(null);
+        btnMinera6.setBorderPainted(false);
+        btnMinera6.setContentAreaFilled(false);
+        btnMinera6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 90, 70));
+
+        btnMinera8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera8.setToolTipText("");
+        btnMinera8.setBorder(null);
+        btnMinera8.setBorderPainted(false);
+        btnMinera8.setContentAreaFilled(false);
+        btnMinera8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 90, 70));
+
+        btnMinera7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera7.setToolTipText("");
+        btnMinera7.setBorder(null);
+        btnMinera7.setBorderPainted(false);
+        btnMinera7.setContentAreaFilled(false);
+        btnMinera7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 90, 70));
+
+        btnMinera9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera9.setToolTipText("");
+        btnMinera9.setBorder(null);
+        btnMinera9.setBorderPainted(false);
+        btnMinera9.setContentAreaFilled(false);
+        btnMinera9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
+        btnMinera9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
+        jPanel1.add(btnMinera9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 90, 70));
+
+        btnSemaforo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo1.setBorder(null);
+        btnSemaforo1.setBorderPainted(false);
+        btnSemaforo1.setContentAreaFilled(false);
+        btnSemaforo1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 70, 60));
+
+        btnSemaforo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo2.setBorder(null);
+        btnSemaforo2.setBorderPainted(false);
+        btnSemaforo2.setContentAreaFilled(false);
+        btnSemaforo2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 70, 60));
+
+        btnSemaforo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo3.setBorder(null);
+        btnSemaforo3.setBorderPainted(false);
+        btnSemaforo3.setContentAreaFilled(false);
+        btnSemaforo3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 70, 60));
+
+        btnSemaforo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo4.setBorder(null);
+        btnSemaforo4.setBorderPainted(false);
+        btnSemaforo4.setContentAreaFilled(false);
+        btnSemaforo4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 70, 60));
+
+        btnSemaforo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo5.setBorder(null);
+        btnSemaforo5.setBorderPainted(false);
+        btnSemaforo5.setContentAreaFilled(false);
+        btnSemaforo5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 70, 60));
+
+        btnSemaforo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo6.setBorder(null);
+        btnSemaforo6.setBorderPainted(false);
+        btnSemaforo6.setContentAreaFilled(false);
+        btnSemaforo6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 70, 60));
+
+        btnSemaforo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo7.setBorder(null);
+        btnSemaforo7.setBorderPainted(false);
+        btnSemaforo7.setContentAreaFilled(false);
+        btnSemaforo7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 70, 60));
+
+        btnSemaforo8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo8.setBorder(null);
+        btnSemaforo8.setBorderPainted(false);
+        btnSemaforo8.setContentAreaFilled(false);
+        btnSemaforo8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 70, 60));
+
+        btnSemaforo9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo9.setBorder(null);
+        btnSemaforo9.setBorderPainted(false);
+        btnSemaforo9.setContentAreaFilled(false);
+        btnSemaforo9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 70, 60));
+
+        btnSemaforo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo10.setBorder(null);
+        btnSemaforo10.setBorderPainted(false);
+        btnSemaforo10.setContentAreaFilled(false);
+        btnSemaforo10.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 70, 60));
+
+        btnSemaforo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo11.setBorder(null);
+        btnSemaforo11.setBorderPainted(false);
+        btnSemaforo11.setContentAreaFilled(false);
+        btnSemaforo11.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 70, 60));
+
+        btnSemaforo12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo12.setBorder(null);
+        btnSemaforo12.setBorderPainted(false);
+        btnSemaforo12.setContentAreaFilled(false);
+        btnSemaforo12.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 70, 60));
+
+        btnSemaforo13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo13.setBorder(null);
+        btnSemaforo13.setBorderPainted(false);
+        btnSemaforo13.setContentAreaFilled(false);
+        btnSemaforo13.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 70, 60));
+
+        btnSemaforo14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo14.setBorder(null);
+        btnSemaforo14.setBorderPainted(false);
+        btnSemaforo14.setContentAreaFilled(false);
+        btnSemaforo14.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo14.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo14, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 70, 60));
+
+        btnSemaforo17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo17.setBorder(null);
+        btnSemaforo17.setBorderPainted(false);
+        btnSemaforo17.setContentAreaFilled(false);
+        btnSemaforo17.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
+        btnSemaforo17.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
+        jPanel1.add(btnSemaforo17, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 70, 60));
+
+        Mapa_Fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mapa Fond.png"))); // NOI18N
+        jPanel1.add(Mapa_Fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 450));
+
+        jScrollPane1.setViewportView(jPanel1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(453, 0, 450, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -83,7 +373,44 @@ public class FrmMapa extends FrmBase {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Mapa_Fond;
+    private javax.swing.JTextField TxtID;
+    private javax.swing.JButton btnDeshabilitar;
+    private javax.swing.JButton btnHabilitar;
     private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnMinera1;
+    private javax.swing.JButton btnMinera2;
+    private javax.swing.JButton btnMinera3;
+    private javax.swing.JButton btnMinera4;
+    private javax.swing.JButton btnMinera5;
+    private javax.swing.JButton btnMinera6;
+    private javax.swing.JButton btnMinera7;
+    private javax.swing.JButton btnMinera8;
+    private javax.swing.JButton btnMinera9;
     private javax.swing.JButton btnNotificaciones;
+    private javax.swing.JButton btnSemaforo1;
+    private javax.swing.JButton btnSemaforo10;
+    private javax.swing.JButton btnSemaforo11;
+    private javax.swing.JButton btnSemaforo12;
+    private javax.swing.JButton btnSemaforo13;
+    private javax.swing.JButton btnSemaforo14;
+    private javax.swing.JButton btnSemaforo17;
+    private javax.swing.JButton btnSemaforo2;
+    private javax.swing.JButton btnSemaforo3;
+    private javax.swing.JButton btnSemaforo4;
+    private javax.swing.JButton btnSemaforo5;
+    private javax.swing.JButton btnSemaforo6;
+    private javax.swing.JButton btnSemaforo7;
+    private javax.swing.JButton btnSemaforo8;
+    private javax.swing.JButton btnSemaforo9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

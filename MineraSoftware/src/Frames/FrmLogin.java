@@ -63,7 +63,7 @@ public class FrmLogin extends FrmBase {
                 btnIniciarSesionActionPerformed(evt);
             }
         });
-        jPanel1.add(btnIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, 90, 20));
+        jPanel1.add(btnIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 580, 90, 20));
 
         Icon_Minero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Icons_Minero.png"))); // NOI18N
         jPanel1.add(Icon_Minero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 420, 230));
