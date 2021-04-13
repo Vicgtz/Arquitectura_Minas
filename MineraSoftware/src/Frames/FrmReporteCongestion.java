@@ -31,66 +31,160 @@ public class FrmReporteCongestion extends FrmBase {
         jPanel1 = new javax.swing.JPanel();
         btnMenu = new javax.swing.JButton();
         btnNotificaciones = new javax.swing.JButton();
-        rSCalendar1 = new rojeru_san.componentes.RSCalendar();
+        btnSemaforo = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        btnVehiculo = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        rSCalendar2 = new rojeru_san.componentes.RSCalendar();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtFecha = new javax.swing.JTextField();
+        TxtDescripcion = new javax.swing.JTextField();
+        txtTipodeCongestion = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Reporte Congestion");
+        setMinimumSize(new java.awt.Dimension(1012, 496));
+        setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(56, 65, 82));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1012, 496));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnMenu.setForeground(new java.awt.Color(255, 255, 255));
         btnMenu.setText("Volver menu");
+        btnMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));
+        btnMenu.setBorderPainted(false);
+        btnMenu.setContentAreaFilled(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMenuActionPerformed(evt);
             }
         });
+        jPanel1.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 140, 20));
 
+        btnNotificaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnNotificaciones.setForeground(new java.awt.Color(255, 255, 255));
         btnNotificaciones.setText("Notificaciones");
+        btnNotificaciones.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));
+        btnNotificaciones.setBorderPainted(false);
+        btnNotificaciones.setContentAreaFilled(false);
         btnNotificaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNotificacionesActionPerformed(evt);
             }
         });
+        jPanel1.add(btnNotificaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, 140, 20));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(rSCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 325, Short.MAX_VALUE)
-                .addComponent(btnMenu)
-                .addGap(284, 284, 284))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(478, 478, 478)
-                    .addComponent(btnNotificaciones)
-                    .addContainerGap(435, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnMenu)
-                .addGap(157, 157, 157))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(rSCalendar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 163, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(195, 195, 195)
-                    .addComponent(btnNotificaciones)
-                    .addContainerGap(278, Short.MAX_VALUE)))
-        );
+        btnSemaforo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnSemaforo.setForeground(new java.awt.Color(255, 255, 255));
+        btnSemaforo.setText("Semaforo");
+        btnSemaforo.setContentAreaFilled(false);
+        jPanel1.add(btnSemaforo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 140, -1));
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Cuasa");
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Perdida");
+        jButton3.setBorderPainted(false);
+        jButton3.setContentAreaFilled(false);
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 290, 100, -1));
+
+        btnVehiculo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnVehiculo.setForeground(new java.awt.Color(255, 255, 255));
+        btnVehiculo.setText("Vehiculo");
+        btnVehiculo.setBorderPainted(false);
+        btnVehiculo.setContentAreaFilled(false);
+        jPanel1.add(btnVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 100, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ingeniero.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 170, 190));
+
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("User:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        rSCalendar2.setColorBackground(new java.awt.Color(0, 0, 255));
+        jPanel2.add(rSCalendar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 300, 240));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Grafica.PNG"))); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 430, 240));
+
+        jLabel5.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(56, 65, 82));
+        jLabel5.setText("Fecha:");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(56, 65, 82));
+        jLabel6.setText("Descripcion:");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(56, 65, 82));
+        jLabel7.setText("Tiepo de congestionamiento:");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(56, 65, 82));
+        jLabel8.setText("Informacion del reporte");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+
+        txtFecha.setBorder(null);
+        jPanel2.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, 260, -1));
+
+        TxtDescripcion.setBorder(null);
+        jPanel2.add(TxtDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 630, 30));
+
+        txtTipodeCongestion.setBorder(null);
+        jPanel2.add(txtTipodeCongestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 150, -1));
+
+        jSeparator1.setBackground(new java.awt.Color(56, 65, 82));
+        jSeparator1.setForeground(new java.awt.Color(56, 65, 82));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 630, 30));
+
+        jSeparator2.setBackground(new java.awt.Color(56, 65, 82));
+        jSeparator2.setForeground(new java.awt.Color(56, 65, 82));
+        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 150, 30));
+
+        jSeparator3.setBackground(new java.awt.Color(56, 65, 82));
+        jSeparator3.setForeground(new java.awt.Color(56, 65, 82));
+        jPanel2.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 150, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 858, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -108,9 +202,28 @@ public class FrmReporteCongestion extends FrmBase {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TxtDescripcion;
     private javax.swing.JButton btnMenu;
     private javax.swing.JButton btnNotificaciones;
+    private javax.swing.JButton btnSemaforo;
+    private javax.swing.JButton btnVehiculo;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private rojeru_san.componentes.RSCalendar rSCalendar1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private rojeru_san.componentes.RSCalendar rSCalendar2;
+    private javax.swing.JTextField txtFecha;
+    private javax.swing.JTextField txtTipodeCongestion;
     // End of variables declaration//GEN-END:variables
 }

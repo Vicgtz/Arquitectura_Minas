@@ -13,7 +13,7 @@ public class FrmMenu extends FrmBase {
 
     
     private static FrmLogin frmLogin;
-    private static FrmRegistroReporte frmRegistroReporte;
+    
     private static FrmReporteMaterial frmReporteMaterial;
     private static FrmMapa frmMapa;
     
@@ -36,7 +36,6 @@ public class FrmMenu extends FrmBase {
 
         btnCerrarSesion = new javax.swing.JButton();
         btnNotificaciones = new javax.swing.JButton();
-        btnRegistroReporte = new javax.swing.JButton();
         btnReporteMaterial = new javax.swing.JButton();
         btnMapa = new javax.swing.JButton();
 
@@ -53,13 +52,6 @@ public class FrmMenu extends FrmBase {
         btnNotificaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNotificacionesActionPerformed(evt);
-            }
-        });
-
-        btnRegistroReporte.setText("Registro Reporte");
-        btnRegistroReporte.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistroReporteActionPerformed(evt);
             }
         });
 
@@ -84,9 +76,7 @@ public class FrmMenu extends FrmBase {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(321, 321, 321)
-                        .addComponent(btnRegistroReporte)
-                        .addGap(98, 98, 98)
+                        .addGap(534, 534, 534)
                         .addComponent(btnReporteMaterial)
                         .addGap(114, 114, 114)
                         .addComponent(btnMapa))
@@ -106,7 +96,6 @@ public class FrmMenu extends FrmBase {
                     .addComponent(btnCerrarSesion))
                 .addGap(186, 186, 186)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnRegistroReporte)
                     .addComponent(btnReporteMaterial)
                     .addComponent(btnMapa))
                 .addContainerGap(435, Short.MAX_VALUE))
@@ -125,11 +114,6 @@ public class FrmMenu extends FrmBase {
         this.getInstanciaFrmNotificaciones().setVisible(true);
     }//GEN-LAST:event_btnNotificacionesActionPerformed
 
-    private void btnRegistroReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistroReporteActionPerformed
-        this.setVisible(false);
-        getFrmRegistroReporte().setVisible(true);
-    }//GEN-LAST:event_btnRegistroReporteActionPerformed
-
     private void btnReporteMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteMaterialActionPerformed
         this.setVisible(false);
         getFrmReporteMaterial().setVisible(true);
@@ -147,12 +131,12 @@ public class FrmMenu extends FrmBase {
         return frmLogin;
     }
     
-    public static FrmRegistroReporte getFrmRegistroReporte(){
-        if (frmRegistroReporte == null) {
-            frmRegistroReporte = new FrmRegistroReporte();
-        }
-        return frmRegistroReporte;
-    }
+//    public static FrmRegistroReporte getFrmRegistroReporte(){
+//        if (frmRegistroReporte == null) {
+//            frmRegistroReporte = new FrmRegistroReporte();
+//        }
+//        return frmRegistroReporte;
+//    }
     
     public static FrmReporteMaterial getFrmReporteMaterial(){
         if (frmReporteMaterial == null) {
@@ -173,7 +157,6 @@ public class FrmMenu extends FrmBase {
     private javax.swing.JButton btnCerrarSesion;
     private javax.swing.JButton btnMapa;
     private javax.swing.JButton btnNotificaciones;
-    private javax.swing.JButton btnRegistroReporte;
     private javax.swing.JButton btnReporteMaterial;
     // End of variables declaration//GEN-END:variables
 }

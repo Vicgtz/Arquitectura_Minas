@@ -26,9 +26,7 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
-                      <Component id="btnRegistroReporte" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="534" max="-2" attributes="0"/>
                       <Component id="btnReporteMaterial" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
                       <Component id="btnMapa" min="-2" max="-2" attributes="0"/>
@@ -54,7 +52,6 @@
               </Group>
               <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnRegistroReporte" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnReporteMaterial" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnMapa" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -78,14 +75,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNotificacionesActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnRegistroReporte">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Registro Reporte"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistroReporteActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnReporteMaterial">

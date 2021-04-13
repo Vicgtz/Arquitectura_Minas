@@ -69,6 +69,7 @@ public class FrmMapa extends FrmBase {
         Mapa_Fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Mapa");
         setMinimumSize(new java.awt.Dimension(908, 480));
         setResizable(false);
         getContentPane().setLayout(null);
