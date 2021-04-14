@@ -5,7 +5,8 @@
  */
 package Dominio;
 
-
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -16,20 +17,25 @@ public class notificaciones {
     private Integer id;
     private vehiculo vehiculo;
     private String mensaje;
-    private Usuario destinatario;
+    private usuario1 destinatario;
     private String clave;
     private Semaforo semaforo;
+    private Date fecha;
+    
 
-    public notificaciones(Integer id, vehiculo vehiculo, String mensaje, Usuario destinatario, String clave, Semaforo semaforo) {
+    public notificaciones(Integer id, vehiculo vehiculo, String mensaje, usuario1 destinatario, String clave, Semaforo semaforo, Date fecha) {
         this.id = id;
         this.vehiculo = vehiculo;
         this.mensaje = mensaje;
         this.destinatario = destinatario;
         this.clave = clave;
         this.semaforo = semaforo;
+        this.fecha = fecha;
     }
 
-    public notificaciones(Integer id, vehiculo vehiculo, String mensaje, Usuario destinatario, String clave) {
+    
+
+    public notificaciones(Integer id, vehiculo vehiculo, String mensaje, usuario1 destinatario, String clave) {
         this.id = id;
         this.vehiculo = vehiculo;
         this.mensaje = mensaje;
@@ -67,11 +73,11 @@ public class notificaciones {
         this.mensaje = mensaje;
     }
 
-    public Usuario getDestinatario() {
+    public usuario1 getDestinatario() {
         return destinatario;
     }
 
-    public void setDestinatario(Usuario destinatario) {
+    public void setDestinatario(usuario1 destinatario) {
         this.destinatario = destinatario;
     }
 
@@ -91,11 +97,18 @@ public class notificaciones {
         this.semaforo = semaforo;
     }
 
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
     @Override
     public String toString() {
-        return "notificaciones{" + "id=" + id + ", vehiculo=" + vehiculo + ", mensaje=" + mensaje + ", destinatario=" + destinatario + ", clave=" + clave + ", semaforo=" + semaforo + '}';
+        return "notificaciones{" + "id=" + id + ", vehiculo=" + vehiculo + ", mensaje=" + mensaje + ", destinatario=" + destinatario + ", clave=" + clave + ", semaforo=" + semaforo + ", fecha=" + fecha + '}';
     }
-    
     
     
     

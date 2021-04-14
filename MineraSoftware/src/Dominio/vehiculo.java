@@ -17,13 +17,16 @@ public class vehiculo {
      private String material;
      private String cantidadMaterial;
 
-    public vehiculo(Integer id, String clave, String ubicacion, String material, String cantidadMaterial) {
+    public vehiculo(Integer id, String clave, String ubicacion, String estado, String material, String cantidadMaterial) {
         this.id = id;
         this.clave = clave;
         this.ubicacion = ubicacion;
+        this.estado = estado;
         this.material = material;
         this.cantidadMaterial = cantidadMaterial;
     }
+
+   
      
     public vehiculo(Integer id, String clave) {
         this.id = id;
