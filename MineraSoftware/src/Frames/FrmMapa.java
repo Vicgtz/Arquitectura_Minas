@@ -78,7 +78,7 @@ public class FrmMapa extends FrmBase {
         jPanel2.setLayout(null);
 
         btnMenu.setForeground(new java.awt.Color(0, 0, 255));
-        btnMenu.setText("Volver menu");
+        btnMenu.setText("Volver menú");
         btnMenu.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 255), 1, true));
         btnMenu.setContentAreaFilled(false);
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -103,9 +103,9 @@ public class FrmMapa extends FrmBase {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mapa Icon.png"))); // NOI18N
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(150, -40, 240, 240);
+        jLabel1.setBounds(150, -30, 240, 240);
 
-        jLabel2.setText("ID ");
+        jLabel2.setText("ID:");
         jPanel2.add(jLabel2);
         jLabel2.setBounds(30, 270, 30, 20);
 
@@ -121,13 +121,13 @@ public class FrmMapa extends FrmBase {
         jPanel2.add(txtNombre);
         txtNombre.setBounds(90, 240, 260, 20);
 
-        jLabel3.setText("Ubicacion ");
+        jLabel3.setText("Ubicación:");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(30, 310, 60, 14);
 
-        jLabel4.setText("Nombre");
+        jLabel4.setText("Nombre:");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(30, 240, 40, 14);
+        jLabel4.setBounds(30, 240, 50, 14);
 
         btnHabilitar.setText("Habilitar");
         btnHabilitar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));

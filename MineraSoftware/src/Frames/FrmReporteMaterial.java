@@ -61,7 +61,7 @@ public class FrmReporteMaterial extends FrmBase {
 
         btnMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnMenu.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu.setText("Volver menu");
+        btnMenu.setText("Volver menú");
         btnMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));
         btnMenu.setBorderPainted(false);
         btnMenu.setContentAreaFilled(false);
@@ -94,7 +94,7 @@ public class FrmReporteMaterial extends FrmBase {
 
         btnVehiculo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVehiculo.setForeground(new java.awt.Color(255, 255, 255));
-        btnVehiculo.setText("Vehiculo");
+        btnVehiculo.setText("Vehículo");
         btnVehiculo.setBorderPainted(false);
         btnVehiculo.setContentAreaFilled(false);
         jPanel1.add(btnVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 100, -1));
@@ -111,7 +111,7 @@ public class FrmReporteMaterial extends FrmBase {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rSCalendar2.setColorBackground(new java.awt.Color(56, 65, 82));
-        jPanel2.add(rSCalendar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 300, 240));
+        jPanel2.add(rSCalendar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 360, 330));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/GraficaMInerales.PNG"))); // NOI18N
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 430, 240));
@@ -123,7 +123,7 @@ public class FrmReporteMaterial extends FrmBase {
 
         jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(56, 65, 82));
-        jLabel6.setText("Descripcion:");
+        jLabel6.setText("Descripción:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
@@ -133,7 +133,7 @@ public class FrmReporteMaterial extends FrmBase {
 
         jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(56, 65, 82));
-        jLabel8.setText("Informacion del reporte");
+        jLabel8.setText("Información del reporte");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         txtFecha.setBorder(null);

@@ -63,7 +63,7 @@ public class FrmReporteCongestion extends FrmBase {
 
         btnMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnMenu.setForeground(new java.awt.Color(255, 255, 255));
-        btnMenu.setText("Volver menu");
+        btnMenu.setText("Volver menú");
         btnMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 255)));
         btnMenu.setBorderPainted(false);
         btnMenu.setContentAreaFilled(false);
@@ -89,27 +89,37 @@ public class FrmReporteCongestion extends FrmBase {
 
         btnSemaforo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnSemaforo.setForeground(new java.awt.Color(255, 255, 255));
-        btnSemaforo.setText("Semaforo");
+        btnSemaforo.setText("Semáforo");
         btnSemaforo.setContentAreaFilled(false);
+        btnSemaforo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSemaforoActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnSemaforo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 140, -1));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Cuasa");
+        jButton2.setText("Causa");
         jButton2.setBorderPainted(false);
         jButton2.setContentAreaFilled(false);
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Perdida");
+        jButton3.setText("Pérdida");
         jButton3.setBorderPainted(false);
         jButton3.setContentAreaFilled(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 290, 100, -1));
 
         btnVehiculo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVehiculo.setForeground(new java.awt.Color(255, 255, 255));
-        btnVehiculo.setText("Vehiculo");
+        btnVehiculo.setText("Vehículo");
         btnVehiculo.setBorderPainted(false);
         btnVehiculo.setContentAreaFilled(false);
         jPanel1.add(btnVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 100, -1));
@@ -138,17 +148,17 @@ public class FrmReporteCongestion extends FrmBase {
 
         jLabel6.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(56, 65, 82));
-        jLabel6.setText("Descripcion:");
+        jLabel6.setText("Descripción:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(56, 65, 82));
-        jLabel7.setText("Tiepo de congestionamiento:");
+        jLabel7.setText("Tipo de congestionamiento:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(56, 65, 82));
-        jLabel8.setText("Informacion del reporte");
+        jLabel8.setText("Información del reporte");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         txtFecha.setBorder(null);
@@ -199,6 +209,14 @@ public class FrmReporteCongestion extends FrmBase {
         this.setVisible(false);
          this.getInstanciaFrmNotificaciones().setVisible(true);
     }//GEN-LAST:event_btnNotificacionesActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void btnSemaforoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSemaforoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSemaforoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

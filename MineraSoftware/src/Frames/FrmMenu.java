@@ -98,7 +98,7 @@ public class FrmMenu extends FrmBase {
         });
 
         btnReporteCongestion.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        btnReporteCongestion.setText("Reporte Congestion");
+        btnReporteCongestion.setText("Reporte Congestión");
         btnReporteCongestion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReporteCongestionActionPerformed(evt);
