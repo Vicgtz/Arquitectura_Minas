@@ -8,6 +8,7 @@ package Datos;
 import Dominio.usuario1;
 import Dominio.vehiculo;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -21,17 +22,20 @@ public class CRUDvehiculo extends CRUD<vehiculo> {
 
     @Override
     public void guardar(vehiculo entidad) {
-        try{
+        try {
             Connection conexion = this.getConexion();
-            Statement comando = conexion.createStatement();            
-            String sql = String.format("INSERT INTO `mina`.`vehiculo` (`clave`, `ubicacion`, `estado`, `material`, `cantidadmaterial`) VALUES ('%s', '%s', '%s', '%s', '%s');", 
-                    entidad.getClave(), entidad.getUbicacion(), entidad.getEstado(),entidad.getMaterial(),entidad.getCantidadMaterial());
-            comando.executeUpdate(sql);
+            String sql = "INSERT INTO mina.vehiculo (clave, ubicacion, estado, material, cantidadmaterial) VALUES (?,?,?,?,?);";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setString(1, entidad.getClave());
+            ps.setString(2, entidad.getUbicacion());
+            ps.setString(3, entidad.getEstado());
+            ps.setString(4, entidad.getMaterial());
+            ps.setString(5, entidad.getCantidadMaterial());
+            ps.executeUpdate();
             conexion.close();
-        }
-        catch(SQLException ex){
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
-        } 
+        }
     }
 
     @Override
@@ -44,65 +48,60 @@ public class CRUDvehiculo extends CRUD<vehiculo> {
          ArrayList<vehiculo> listaP = new ArrayList<>();
         try{            
             java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();
-            String sql = "SELECT idvehiculo, clave, ubicacion, estado, material, cantidadmaterial FROM mina.vehiculo;";
-            ResultSet resultado = comando.executeQuery(sql);
-            while(resultado.next())
+            String sql = "SELECT * FROM mina.vehiculo;";
+             PreparedStatement ps = conexion.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
             {                
-                int id = resultado.getInt("idvehiculo");
-                String clave = resultado.getString("clave");
-                String ubicacion = resultado.getString("ubicacion");
-                String estado = resultado.getString("estado");
-                String material = resultado.getString("material");
-                String cantidadmaterial = resultado.getString("cantidadmaterial");
+                int id = rs.getInt(1);
+                String clave = rs.getString(2);
+                String ubicacion = rs.getString(3);
+                String estado = rs.getString(4);
+                String material = rs.getString(5);
+                String cantidad = rs.getString(6);
                 
-                vehiculo p = new vehiculo(id, clave, ubicacion,estado, material, cantidadmaterial);
-                listaP.add(p);
+                
+               listaP.add(new vehiculo(id, clave, ubicacion, estado, material, cantidad)) ;
+                
             }
             conexion.close();
-            return listaP;
+            
         }
         catch(SQLException ex){
             System.err.println(ex.getMessage());
-            return listaP;
+            
         }
+        
+        return listaP;
     }
 
     @Override
     public vehiculo ObtenerUno(String textoBusqueda) {
-        ArrayList<vehiculo> listaP = new ArrayList<>();
-        try{            
-            java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();
-            String sql = "SELECT idvehiculo, clave, ubicacion, estado, material, cantidadmaterial FROM mina.vehiculo;";
-            ResultSet resultado = comando.executeQuery(sql);
-            while(resultado.next())
-            {                
-                int id = resultado.getInt("idvehiculo");
-                String clave = resultado.getString("clave");
-                String ubicacion = resultado.getString("ubicacion");
-                String estado = resultado.getString("estado");
-                String material = resultado.getString("material");
-                String cantidadmaterial = resultado.getString("cantidadmaterial");
+       vehiculo s = null;
+         try {
+            Connection conexion = this.getConexion();
+            String sql = "SELECT * FROM mina.vehiculo WHERE idvehiculo = ?";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setInt(1, Integer.parseInt(textoBusqueda));
+            ResultSet rs = ps.executeQuery();
+
+            
+
+            rs.next();
+              int id = rs.getInt(1);
+                String clave = rs.getString(2);
+                String ubicacion = rs.getString(3);
+                String estado = rs.getString(4);
+                String material = rs.getString(5);
+                String cantidad = rs.getString(6);
                 
-                vehiculo p = new vehiculo(id, clave, ubicacion, estado, material, cantidadmaterial);
-                listaP.add(p);
-            }
+                
+               s = new vehiculo(id, clave, ubicacion, estado, material, cantidad) ;
+                
             conexion.close();
-             for(vehiculo p : listaP)
-            {
-                String idP = p.getId()+"";
-                if(idP.equalsIgnoreCase(textoBusqueda))
-                {
-                    return p;
-                }                
-            }
-            return null;    
-        }
-        catch(SQLException ex){
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
-            return null;
         }
+    return s;
     }
-    
 }

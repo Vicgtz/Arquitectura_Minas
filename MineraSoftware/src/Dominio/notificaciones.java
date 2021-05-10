@@ -33,7 +33,15 @@ public class notificaciones {
         this.fecha = fecha;
     }
 
-    
+    public notificaciones( vehiculo vehiculo, String mensaje, usuario1 destinatario, String clave, Semaforo semaforo, Date fecha) {
+       
+        this.vehiculo = vehiculo;
+        this.mensaje = mensaje;
+        this.destinatario = destinatario;
+        this.clave = clave;
+        this.semaforo = semaforo;
+        this.fecha = fecha;
+    } 
 
     public notificaciones(Integer id, vehiculo vehiculo, String mensaje, usuario1 destinatario, String clave) {
         this.id = id;

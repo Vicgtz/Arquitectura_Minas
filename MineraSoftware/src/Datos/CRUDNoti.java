@@ -12,6 +12,7 @@ import Dominio.vehiculo;
 import com.sun.jdi.connect.spi.Connection;
 import java.beans.Statement;
 import java.sql.Date;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -25,17 +26,24 @@ public class CRUDNoti extends CRUD<notificaciones>{
 
     @Override
     public void guardar(notificaciones entidad) {
-        try{
+       try {
             java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();           
-            String sql = String.format("INSERT INTO `mina`.`notificacionesvehiculo` (`vehiculo`, `mensaje`, `destinatario`, `clave`, `semaforo`, `fecha`) VALUES ('%s', '%s', '%s', '%s', '%s');", 
-                    entidad.getVehiculo(), entidad.getMensaje(), entidad.getDestinatario(), entidad.getClave(), entidad.getSemaforo());
-            comando.executeUpdate(sql);
+            String sql = "INSERT INTO mina.notificacionesvehiculo (vehiculo, mensaje, destinatario, clave, semaforo, fecha) VALUES (?,?,?,?,?,?);";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            java.sql.Date date = new java.sql.Date(entidad.getFecha().getTime());
+            
+            ps.setInt(1, entidad.getVehiculo().getId());
+            ps.setString(2, entidad.getMensaje());          
+            ps.setInt(3, entidad.getDestinatario().getId());
+            ps.setString(4, entidad.getClave());
+            ps.setInt(5, entidad.getSemaforo().getId());
+            ps.setDate(6, date);
+            ps.executeUpdate();
             conexion.close();
-        }
-        catch(Exception ex){
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
-        } 
+        }
+
     }
 
     @Override
@@ -45,26 +53,28 @@ public class CRUDNoti extends CRUD<notificaciones>{
 
     @Override
     public ArrayList<notificaciones> obtener() {
-        ArrayList<notificaciones> listaP = new ArrayList<>();
+       ArrayList<notificaciones> listaP = new ArrayList<>();
         try{            
             java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();
-            String sql = "SELECT idnotificacionesvehiculo, vehiculo, mensaje, destinatario, clave, semaforo, fecha FROM mina.notificacionesvehiculo;";
-            ResultSet resultado = comando.executeQuery(sql);
-            while(resultado.next())
+           
+            String sql = "SELECT * FROM mina.notificacionesvehiculo;";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+           
+            CRUD sema = new CRUDsemaforo();
+            CRUD usu = new CRUDusuario();
+            CRUD ve = new CRUDvehiculo();
+            while(rs.next())
             {                
-                int id = resultado.getInt("idnotificacionesvehiculo");
-                int vehiculo = resultado.getInt("vehiculo");
-                String mensaje = resultado.getString("mensaje");
-                int destinatario = resultado.getInt("destinatario");
-                String clave = resultado.getString("clave");
-                int semaforo = resultado.getInt("semaforo");
-                Date fecha = resultado.getDate("fecha");
-                
-                vehiculo v =(vehiculo) new CRUDvehiculo().ObtenerUno(vehiculo+"");
-                Semaforo s =(Semaforo) new CRUDsemaforo().ObtenerUno(semaforo+"");
-                usuario1 u = (usuario1) new CRUDusuario().ObtenerUno(destinatario+"");
-                notificaciones p = new notificaciones(id, v, mensaje, u, clave, s, fecha);
+                int id = rs.getInt(1);
+                vehiculo v = (vehiculo) ve.ObtenerUno(rs.getInt(2) + "");
+                String mensaje = rs.getString(3);
+                usuario1 u = (usuario1) usu.ObtenerUno(rs.getInt(4) + "");
+                String clave = rs.getString(5);
+                Semaforo s = (Semaforo) sema.ObtenerUno(rs.getInt(6)+ "");
+                java.util.Date fecha = rs.getDate(7);
+               
+               notificaciones p = new notificaciones(id, v,mensaje,u,clave,s, fecha);
                 listaP.add(p);
             }
             conexion.close();
@@ -80,5 +90,4 @@ public class CRUDNoti extends CRUD<notificaciones>{
     public notificaciones ObtenerUno(String textoBusqueda) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }

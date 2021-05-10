@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Logica;
+package Control;
 
 import Dominio.Semaforo;
 import Dominio.notificaciones;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
  *
  * @author DELL
  */
-public interface Ilogica {
+public interface Icontrol {
    
     public  ArrayList<notificaciones> obtenerNotificaciones();
     

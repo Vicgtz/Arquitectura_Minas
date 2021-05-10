@@ -10,6 +10,7 @@ import Dominio.notificaciones;
 import Dominio.usuario1;
 import Dominio.vehiculo;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -21,17 +22,20 @@ import java.util.ArrayList;
  */
 public class CRUDusuario extends CRUD<usuario1>{
 
-    @Override
+   @Override
     public void guardar(usuario1 entidad) {
-         try{
+        try {
             Connection conexion = this.getConexion();
-            Statement comando = conexion.createStatement();            
-            String sql = String.format("INSERT INTO `mina`.`usuario` (`nombre`, `puesto`, `pass`) VALUES ('%s', '%s', '%s');", 
-                    entidad.getNombre(), entidad.getPuesto(), entidad.getPass());
-            comando.executeUpdate(sql);
+            String sql = "INSERT INTO mina.usuario (nombre, puesto, pass) VALUES (?,?,?);";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setString(1, entidad.getNombre());
+            ps.setString(2, entidad.getPuesto());
+           
+           
+            ps.setString(3, entidad.getPass());
+            ps.executeUpdate();
             conexion.close();
-        }
-        catch(SQLException ex){
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         } 
     }
@@ -46,61 +50,60 @@ public class CRUDusuario extends CRUD<usuario1>{
         ArrayList<usuario1> listaP = new ArrayList<>();
         try{            
             java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();
-            String sql = "SELECT idusuario, nombre, puesto, pass FROM mina.usuario;";
-            ResultSet resultado = comando.executeQuery(sql);
-            while(resultado.next())
+            String sql = "SELECT * FROM mina.usuario;";
+             PreparedStatement ps = conexion.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
             {                
-                int id = resultado.getInt("idusuario");
-                String nombre = resultado.getString("nombre");
-                String puesto = resultado.getString("puesto");
-                String pass = resultado.getString("pass");
+                int id = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String puesto = rs.getString(3);
+                String pas = rs.getString(4);
                 
-                usuario1 p = new usuario1(id,nombre, puesto, pass);
-                listaP.add(p);
+                
+                
+               listaP.add(new usuario1(id, nombre, puesto, pas)) ;
+                
             }
             conexion.close();
-            return listaP;
+            
         }
         catch(SQLException ex){
             System.err.println(ex.getMessage());
-            return listaP;
+            
         }
+        
+        return listaP;
     }
 
     @Override
     public usuario1 ObtenerUno(String textoBusqueda) {
-        ArrayList<usuario1> listaP = new ArrayList<>();
-        try{            
-            java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();
-            String sql = "SELECT idusuario, nombre, puesto, pass FROM mina.usuario;";
-            ResultSet resultado = comando.executeQuery(sql);
-            while(resultado.next())
-            {                
-                int id = resultado.getInt("idusuario");
-                String nombre = resultado.getString("nombre");
-                String puesto = resultado.getString("puesto");
-                String pass = resultado.getString("pass");
+        usuario1 s = null;
+         try {
+            Connection conexion = this.getConexion();
+            String sql = "SELECT * FROM mina.usuario WHERE idusuario = ?";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setInt(1, Integer.parseInt(textoBusqueda));
+            ResultSet rs = ps.executeQuery();
+
+            
+
+            rs.next();
+              int id = rs.getInt(1);
+                String nombre = rs.getString(2);
+                String puesto = rs.getString(3);
+                String pas = rs.getString(4);
                 
-                usuario1 p = new usuario1(id,nombre, puesto, pass);
-                listaP.add(p);
-            }
+                
+                
+               s = new usuario1(id, nombre, puesto, pas) ;
+                
             conexion.close();
-             for(usuario1 p : listaP)
-            {
-                String idP = p.getId()+"";
-                if(idP.equalsIgnoreCase(textoBusqueda))
-                {
-                    return p;
-                }                
-            }
-            return null;    
-        }
-        catch(SQLException ex){
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
-            return null;
         }
+    return s;
     }
+    
     
 }

@@ -8,6 +8,7 @@ package Datos;
 import Dominio.Semaforo;
 import Dominio.vehiculo;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -19,17 +20,19 @@ import java.util.ArrayList;
  */
 public class CRUDsemaforo extends CRUD<Semaforo> {
 
+   
     @Override
     public void guardar(Semaforo entidad) {
-       try{
+       try {
             Connection conexion = this.getConexion();
-            Statement comando = conexion.createStatement();            
-            String sql = String.format("INSERT INTO `mina`.`semaforo` (`clave`, `ubicacion`, `estado`) VALUES ('%s', '%s', '%s');", 
-                    entidad.getClave(), entidad.getUbicacion(), entidad.getEstado());
-            comando.executeUpdate(sql);
+            String sql = "INSERT INTO mina.semaforo (clave, ubicacion, estado) VALUES (?,?,?);";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setString(1, entidad.getClave());
+            ps.setString(2, entidad.getUbicacion());
+            ps.setString(3, entidad.getEstado());
+            ps.executeUpdate();
             conexion.close();
-        }
-        catch(SQLException ex){
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         } 
     }
@@ -44,61 +47,59 @@ public class CRUDsemaforo extends CRUD<Semaforo> {
          ArrayList<Semaforo> listaP = new ArrayList<>();
         try{            
             java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();
-            String sql = "SELECT idsemaforo, clave, ubicacion, estado FROM mina.semaforo;";
-            ResultSet resultado = comando.executeQuery(sql);
-            while(resultado.next())
-            {                
-                int id = resultado.getInt("idsemaforo");
-                String clave = resultado.getString("clave");
-                String ubicacion = resultado.getString("ubicacion");
-                String estado = resultado.getString("estado");
+            String sql = "SELECT * FROM mina.semaforo;";
+             PreparedStatement ps = conexion.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
+            {               
+                int id = rs.getInt(1);
+                String clave = rs.getString(2);
+                String ubicacion = rs.getString(3);
+                String estado = rs.getString(4);
                 
-                Semaforo p = new Semaforo(id, clave, ubicacion, estado);
-                listaP.add(p);
+                
+               listaP.add(new Semaforo(id, clave, ubicacion, estado)) ;
+                
             }
             conexion.close();
-            return listaP;
+            
         }
         catch(SQLException ex){
             System.err.println(ex.getMessage());
-            return listaP;
+            
         }
+        
+        return listaP;
     }
 
     @Override
     public Semaforo ObtenerUno(String textoBusqueda) {
-         ArrayList<Semaforo> listaP = new ArrayList<>();
-        try{            
-            java.sql.Connection conexion = this.getConexion();
-            java.sql.Statement comando = conexion.createStatement();
-            String sql = "SELECT idsemaforo, clave, ubicacion, estado FROM mina.semaforo;";
-            ResultSet resultado = comando.executeQuery(sql);
-            while(resultado.next())
-            {                
-                int id = resultado.getInt("idsemaforo");
-                String clave = resultado.getString("clave");
-                String ubicacion = resultado.getString("ubicacion");
-                String estado = resultado.getString("estado");
+         Semaforo s = null;
+         try {
+            Connection conexion = this.getConexion();
+            String sql = "SELECT * FROM mina.semaforo WHERE idsemaforo = ?";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.setInt(1, Integer.parseInt(textoBusqueda));
+            ResultSet rs = ps.executeQuery();
+
+            
+
+            rs.next();
+              int id = rs.getInt(1);
+                String clave = rs.getString(2);
+                String marca = rs.getString(3);
+                String invernadero = rs.getString(4);
+                String numero = rs.getString(5);
+                String correo = rs.getString(6);
                 
-                Semaforo p = new Semaforo(id, clave, ubicacion, estado);
-                listaP.add(p);
-            }
+                
+               s = new Semaforo(id, clave, marca, invernadero) ;
+                
             conexion.close();
-            for(Semaforo p : listaP)
-            {
-                String idP = p.getId()+"";
-                if(idP.equalsIgnoreCase(textoBusqueda))
-                {
-                    return p;
-                }                
-            }
-            return null; 
-        }
-        catch(SQLException ex){
+        } catch (SQLException ex) {
             System.err.println(ex.getMessage());
-            return null;
         }
+    return s;
     }
     
 }

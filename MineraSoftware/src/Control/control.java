@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Logica;
+package Control;
 
 import Datos.CRUD;
 import Datos.CRUDNoti;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
  *
  * @author DELL
  */
-public class logica implements Ilogica {
+public class control implements Icontrol {
 
     CRUD n= new CRUDNoti();
     CRUD s= new CRUDsemaforo();
