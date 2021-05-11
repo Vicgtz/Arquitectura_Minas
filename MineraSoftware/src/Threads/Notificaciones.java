@@ -41,13 +41,8 @@ public class Notificaciones extends Thread{
             {
                 Object[] fila = new Object[3];
                 fila[0] = n.getVehiculo().getClave();
-                /*
-                Por alguna razon al momento de obtener el objeto semaforo en
-                la consulta este regresa vacío y escribe un mensaje de error
-                en consola, debes revisar eso @Victor
-                una vez termines eso, descomentarea esa linea. att: Casal
-                */
-  //            fila[1] = n.getSemaforo().getClave();
+                
+              fila[1] = n.getSemaforo().getClave();
                 fila[2] = n.getMensaje();
                 modeloTabla.addRow(fila);
             }            

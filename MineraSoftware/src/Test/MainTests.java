@@ -54,7 +54,7 @@ public class MainTests {
         ArrayList<notificaciones> noti= new ArrayList<>();
         noti.add(n);
         con.guardarNotificaciones(noti);
-        TimeUnit.SECONDS.sleep(20);
+        TimeUnit.SECONDS.sleep(10);
        }
         
     }

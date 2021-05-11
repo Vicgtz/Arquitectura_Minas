@@ -89,8 +89,7 @@ public class CRUDsemaforo extends CRUD<Semaforo> {
                 String clave = rs.getString(2);
                 String marca = rs.getString(3);
                 String invernadero = rs.getString(4);
-                String numero = rs.getString(5);
-                String correo = rs.getString(6);
+               
                 
                 
                s = new Semaforo(id, clave, marca, invernadero) ;
