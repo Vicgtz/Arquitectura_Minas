@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author R2
+ * @author Comunidad del anillo
  */
 public class Carro5 extends Thread {
     JButton jButton;

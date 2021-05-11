@@ -85,7 +85,7 @@ public class CRUDsemaforo extends CRUD<Semaforo> {
             
 
             rs.next();
-              int id = rs.getInt(1);
+                int id = rs.getInt(1);
                 String clave = rs.getString(2);
                 String marca = rs.getString(3);
                 String invernadero = rs.getString(4);

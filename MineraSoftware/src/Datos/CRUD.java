@@ -14,7 +14,7 @@ public abstract class CRUD<T> {
 
     private static String CADENA_CONEXION = "jdbc:mysql://localhost/mina?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private static String USUARIO = "root";
-    private static String CONTRASENIA = "sesamo"; //Alter: 64224Cas
+    private static String CONTRASENIA = "sesamo";
 
     protected Connection getConexion() throws SQLException {
         try {

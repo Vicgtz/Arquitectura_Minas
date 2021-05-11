@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author R2
+ * @author Comunidad del anillo
  */
 public class Carro1 extends Thread {
 

@@ -7,7 +7,7 @@ package Frames;
 
 /**
  *
- * @author R2
+ * @author Comunidad del anillo
  */
 public class FrmLogin extends FrmBase {
 
