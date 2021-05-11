@@ -9,14 +9,11 @@ import Dominio.Semaforo;
 import Dominio.notificaciones;
 import Dominio.usuario1;
 import Dominio.vehiculo;
-import com.sun.jdi.connect.spi.Connection;
-import java.beans.Statement;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Calendar;
 
 /**
  *

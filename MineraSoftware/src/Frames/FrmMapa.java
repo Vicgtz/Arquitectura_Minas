@@ -5,6 +5,13 @@
  */
 package Frames;
 
+import Threads.Carro1;
+import Threads.Carro2;
+import Threads.Carro3;
+import Threads.Carro4;
+import Threads.Carro5;
+import Threads.Carro6;
+
 /**
  *
  * @author R2
@@ -17,6 +24,22 @@ public class FrmMapa extends FrmBase {
     public FrmMapa() {
         initComponents();
         adaptarPantalla();
+        moverCarros();
+    }
+    
+    public void moverCarros(){
+        Carro1 carro1 = new Carro1(btnMinera1, jPanel1);
+        carro1.start();
+        Carro2 carro2 = new Carro2(btnMinera2, jPanel1);
+        carro2.start();
+        Carro3 carro3 = new Carro3(btnMinera3, jPanel1);
+        carro3.start();
+        Carro4 carro4 = new Carro4(btnMinera4, jPanel1);
+        carro4.start();
+        Carro5 carro5 = new Carro5(btnMinera5, jPanel1);
+        carro5.start();
+        Carro6 carro6 = new Carro6(btnMinera6, jPanel1);
+        carro6.start();
     }
 
     /**
@@ -48,9 +71,6 @@ public class FrmMapa extends FrmBase {
         btnMinera4 = new javax.swing.JButton();
         btnMinera5 = new javax.swing.JButton();
         btnMinera6 = new javax.swing.JButton();
-        btnMinera8 = new javax.swing.JButton();
-        btnMinera7 = new javax.swing.JButton();
-        btnMinera9 = new javax.swing.JButton();
         btnSemaforo1 = new javax.swing.JButton();
         btnSemaforo2 = new javax.swing.JButton();
         btnSemaforo3 = new javax.swing.JButton();
@@ -62,10 +82,6 @@ public class FrmMapa extends FrmBase {
         btnSemaforo9 = new javax.swing.JButton();
         btnSemaforo10 = new javax.swing.JButton();
         btnSemaforo11 = new javax.swing.JButton();
-        btnSemaforo12 = new javax.swing.JButton();
-        btnSemaforo13 = new javax.swing.JButton();
-        btnSemaforo14 = new javax.swing.JButton();
-        btnSemaforo17 = new javax.swing.JButton();
         Mapa_Fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -157,7 +173,7 @@ public class FrmMapa extends FrmBase {
         btnMinera1.setContentAreaFilled(false);
         btnMinera1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 90, 70));
+        jPanel1.add(btnMinera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 40, 40));
 
         btnMinera2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera2.setToolTipText("");
@@ -166,7 +182,12 @@ public class FrmMapa extends FrmBase {
         btnMinera2.setContentAreaFilled(false);
         btnMinera2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 90, 70));
+        btnMinera2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinera2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMinera2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 40, 40));
 
         btnMinera3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera3.setToolTipText("");
@@ -175,7 +196,12 @@ public class FrmMapa extends FrmBase {
         btnMinera3.setContentAreaFilled(false);
         btnMinera3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 90, 70));
+        btnMinera3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinera3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMinera3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 40, 40));
 
         btnMinera4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera4.setToolTipText("");
@@ -184,7 +210,12 @@ public class FrmMapa extends FrmBase {
         btnMinera4.setContentAreaFilled(false);
         btnMinera4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 90, 70));
+        btnMinera4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinera4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMinera4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 40, 40));
 
         btnMinera5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera5.setToolTipText("");
@@ -193,7 +224,12 @@ public class FrmMapa extends FrmBase {
         btnMinera5.setContentAreaFilled(false);
         btnMinera5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 90, 70));
+        btnMinera5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinera5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMinera5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 40, 40));
 
         btnMinera6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera6.setToolTipText("");
@@ -202,34 +238,12 @@ public class FrmMapa extends FrmBase {
         btnMinera6.setContentAreaFilled(false);
         btnMinera6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
         btnMinera6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 90, 70));
-
-        btnMinera8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
-        btnMinera8.setToolTipText("");
-        btnMinera8.setBorder(null);
-        btnMinera8.setBorderPainted(false);
-        btnMinera8.setContentAreaFilled(false);
-        btnMinera8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
-        btnMinera8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 250, 90, 70));
-
-        btnMinera7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
-        btnMinera7.setToolTipText("");
-        btnMinera7.setBorder(null);
-        btnMinera7.setBorderPainted(false);
-        btnMinera7.setContentAreaFilled(false);
-        btnMinera7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
-        btnMinera7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 90, 70));
-
-        btnMinera9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
-        btnMinera9.setToolTipText("");
-        btnMinera9.setBorder(null);
-        btnMinera9.setBorderPainted(false);
-        btnMinera9.setContentAreaFilled(false);
-        btnMinera9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 icon.png"))); // NOI18N
-        btnMinera9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/183233 48.png"))); // NOI18N
-        jPanel1.add(btnMinera9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 90, 70));
+        btnMinera6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinera6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMinera6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 40, 40));
 
         btnSemaforo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo1.setBorder(null);
@@ -237,7 +251,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo1.setContentAreaFilled(false);
         btnSemaforo1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 70, 60));
+        jPanel1.add(btnSemaforo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 40, -1));
 
         btnSemaforo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo2.setBorder(null);
@@ -245,7 +259,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo2.setContentAreaFilled(false);
         btnSemaforo2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 70, 60));
+        jPanel1.add(btnSemaforo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 40, -1));
 
         btnSemaforo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo3.setBorder(null);
@@ -253,7 +267,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo3.setContentAreaFilled(false);
         btnSemaforo3.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, 70, 60));
+        jPanel1.add(btnSemaforo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 40, -1));
 
         btnSemaforo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo4.setBorder(null);
@@ -261,7 +275,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo4.setContentAreaFilled(false);
         btnSemaforo4.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 70, 60));
+        jPanel1.add(btnSemaforo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 40, -1));
 
         btnSemaforo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo5.setBorder(null);
@@ -269,7 +283,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo5.setContentAreaFilled(false);
         btnSemaforo5.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 150, 70, 60));
+        jPanel1.add(btnSemaforo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 40, -1));
 
         btnSemaforo6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo6.setBorder(null);
@@ -277,7 +291,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo6.setContentAreaFilled(false);
         btnSemaforo6.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 70, 60));
+        jPanel1.add(btnSemaforo6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 40, -1));
 
         btnSemaforo7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo7.setBorder(null);
@@ -285,7 +299,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo7.setContentAreaFilled(false);
         btnSemaforo7.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 70, 60));
+        jPanel1.add(btnSemaforo7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 40, -1));
 
         btnSemaforo8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo8.setBorder(null);
@@ -293,7 +307,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo8.setContentAreaFilled(false);
         btnSemaforo8.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 70, 60));
+        jPanel1.add(btnSemaforo8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 40, -1));
 
         btnSemaforo9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo9.setBorder(null);
@@ -301,7 +315,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo9.setContentAreaFilled(false);
         btnSemaforo9.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 70, 60));
+        jPanel1.add(btnSemaforo9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 40, -1));
 
         btnSemaforo10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo10.setBorder(null);
@@ -309,7 +323,7 @@ public class FrmMapa extends FrmBase {
         btnSemaforo10.setContentAreaFilled(false);
         btnSemaforo10.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, 70, 60));
+        jPanel1.add(btnSemaforo10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 40, -1));
 
         btnSemaforo11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo11.setBorder(null);
@@ -317,47 +331,15 @@ public class FrmMapa extends FrmBase {
         btnSemaforo11.setContentAreaFilled(false);
         btnSemaforo11.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
         btnSemaforo11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo11, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 70, 60));
+        jPanel1.add(btnSemaforo11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 40, -1));
 
-        btnSemaforo12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo12.setBorder(null);
-        btnSemaforo12.setBorderPainted(false);
-        btnSemaforo12.setContentAreaFilled(false);
-        btnSemaforo12.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 70, 60));
-
-        btnSemaforo13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo13.setBorder(null);
-        btnSemaforo13.setBorderPainted(false);
-        btnSemaforo13.setContentAreaFilled(false);
-        btnSemaforo13.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 70, 60));
-
-        btnSemaforo14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo14.setBorder(null);
-        btnSemaforo14.setBorderPainted(false);
-        btnSemaforo14.setContentAreaFilled(false);
-        btnSemaforo14.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo14.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo14, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 70, 60));
-
-        btnSemaforo17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo17.setBorder(null);
-        btnSemaforo17.setBorderPainted(false);
-        btnSemaforo17.setContentAreaFilled(false);
-        btnSemaforo17.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 54.png"))); // NOI18N
-        btnSemaforo17.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Semaforo icon 60.png"))); // NOI18N
-        jPanel1.add(btnSemaforo17, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 70, 60));
-
-        Mapa_Fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Mapa Fond.png"))); // NOI18N
+        Mapa_Fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/planosMapa.png"))); // NOI18N
         jPanel1.add(Mapa_Fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 450));
 
         jScrollPane1.setViewportView(jPanel1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(453, 0, 450, 450);
+        jScrollPane1.setBounds(453, 0, 540, 450);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -372,6 +354,26 @@ public class FrmMapa extends FrmBase {
         this.getInstanciaFrmNotificaciones().setVisible(true);
     }//GEN-LAST:event_btnNotificacionesActionPerformed
 
+    private void btnMinera2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinera2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMinera2ActionPerformed
+
+    private void btnMinera3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinera3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMinera3ActionPerformed
+
+    private void btnMinera4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinera4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMinera4ActionPerformed
+
+    private void btnMinera5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinera5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMinera5ActionPerformed
+
+    private void btnMinera6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinera6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMinera6ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Mapa_Fond;
@@ -385,17 +387,10 @@ public class FrmMapa extends FrmBase {
     private javax.swing.JButton btnMinera4;
     private javax.swing.JButton btnMinera5;
     private javax.swing.JButton btnMinera6;
-    private javax.swing.JButton btnMinera7;
-    private javax.swing.JButton btnMinera8;
-    private javax.swing.JButton btnMinera9;
     private javax.swing.JButton btnNotificaciones;
     private javax.swing.JButton btnSemaforo1;
     private javax.swing.JButton btnSemaforo10;
     private javax.swing.JButton btnSemaforo11;
-    private javax.swing.JButton btnSemaforo12;
-    private javax.swing.JButton btnSemaforo13;
-    private javax.swing.JButton btnSemaforo14;
-    private javax.swing.JButton btnSemaforo17;
     private javax.swing.JButton btnSemaforo2;
     private javax.swing.JButton btnSemaforo3;
     private javax.swing.JButton btnSemaforo4;
